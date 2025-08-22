@@ -1,3 +1,5 @@
 /frontend/package-lock.json
 /backend/config.env
 /.idea/
+/admin-panel/package-lock.json
+/admin-panel/node_modules/
