@@ -5,10 +5,22 @@ import Link from 'next/link';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import { apiService } from '../services/api';
 
+interface Blog {
+  id: number;
+  title: string;
+  excerpt: string;
+  author: string;
+  publishedAt: string;
+  readTime: number;
+  category: string;
+  slug: string;
+  featuredImage?: string;
+}
+
 export default function BlogGrid() {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -17,7 +29,8 @@ export default function BlogGrid() {
         const response = await apiService.getBlogs({ limit: 6 });
         setBlogs(response.data.blogs);
       } catch (err) {
-        setError(err.message);
+        const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
+        setError(errorMessage);
         console.error('Error fetching blogs:', err);
       } finally {
         setLoading(false);
@@ -27,7 +40,7 @@ export default function BlogGrid() {
     fetchBlogs();
   }, []);
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import NoteArcLogo from './NoteArcLogo';
 
 export default function Hero() {
@@ -18,18 +19,18 @@ export default function Hero() {
             tools, and insights for developers and content creators.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               href="/try-free"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Try for Free
-            </a>
-            <a
+            </Link>
+            <Link
               href="/blog"
               className="bg-white hover:bg-gray-50 text-orange-600 border-2 border-orange-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Explore Articles
-            </a>
+            </Link>
           </div>
         </div>
         
