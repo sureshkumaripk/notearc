@@ -47,12 +47,12 @@ app.use('*', (req, res) => {
 // Database connection and server start
 async function startServer() {
   try {
-    await sequelize.authenticate();
+    /*await sequelize.authenticate();
     console.log('✅ Database connection established successfully.');
     
     // Sync database (create tables if they don't exist)
     await sequelize.sync({ force: false });
-    console.log('✅ Database synchronized.');
+    console.log('✅ Database synchronized.');*/
     
     // Seed sample data if in development
     if (process.env.NODE_ENV === 'development') {
