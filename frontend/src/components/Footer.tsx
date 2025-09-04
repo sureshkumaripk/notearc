@@ -2,8 +2,11 @@ import Link from 'next/link';
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
 import NoteArcLogo from './NoteArcLogo';
 
+
+
 export default function Footer() {
   return (
+    
     <footer className="bg-gray-50 text-gray-900 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -32,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -62,9 +65,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          {/* Resources */}
+          {/* Resources
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -94,7 +97,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Newsletter Signup */}
@@ -104,7 +107,7 @@ export default function Footer() {
             <p className="text-gray-600 mb-4">
               Get the latest articles and tutorials delivered to your inbox.
             </p>
-            <form className="flex space-x-2">
+            <form className="grid space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -127,17 +130,22 @@ export default function Footer() {
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
-              Privacy Policy
+              Privacy Policy  
             </Link>
             <Link href="/terms" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
-              Terms of Service
+              Terms-Services
             </Link>
-            <Link href="/cookies" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
+            {/* <Link href="/cookies" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
               Cookie Policy
-            </Link>
+            </Link> */}
+            <Link href="/about" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
+              About 
+            </Link> 
+             
           </div>
         </div>
       </div>
+      
     </footer>
   );
 }

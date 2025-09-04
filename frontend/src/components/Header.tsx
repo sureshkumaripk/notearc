@@ -31,7 +31,7 @@ export default function Header() {
             <Link href="/" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
               Home
             </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
+            {/* <Link href="/blog" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
               Blog
             </Link>
             <Link href="/tools" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
@@ -39,8 +39,8 @@ export default function Header() {
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
               About
-            </Link>
-          </nav>
+            </Link> */}
+           </nav> 
 
           {/* Search Bar */}
           <div className="hidden md:flex items-center space-x-4">
@@ -54,12 +54,12 @@ export default function Header() {
               />
               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
             </form>
-            <Link
+            {/* <Link
               href="/try-free"
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Try for free
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile menu button */}
@@ -84,14 +84,14 @@ export default function Header() {
               >
                 Home
               </Link>
-              <Link
+              {/* <Link
                 href="/blog"
                 className="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/tools"
                 className="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
@@ -104,8 +104,8 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </Link>
-              <div className="pt-4">
+              </Link> */}
+              {/* <div className="pt-4">
                 <form onSubmit={handleSearch} className="relative">
                   <input
                     type="text"
@@ -116,18 +116,18 @@ export default function Header() {
                   />
                   <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
                 </form>
-                <Link
+                {/* <Link
                   href="/try-free"
                   className="mt-3 bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-block"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Try for free
-                </Link>
-              </div>
+                </Link> */}
+              {/* </div> */} 
             </div>
           </div>
         )}
       </div>
     </header>
-  );
+      );
 }
