@@ -10,11 +10,14 @@ interface Blog {
   title: string;
   excerpt: string;
   author: string;
-  publishedAt: string;
+  publishedAt: string | null;
   readTime: number;
   category: string;
   slug: string;
   featuredImage?: string;
+  tags?: string[];
+  viewCount?: number;
+  createdAt?: string;
 }
 
 export default function BlogGrid() {
@@ -27,7 +30,12 @@ export default function BlogGrid() {
       try {
         setLoading(true);
         const response = await apiService.getBlogs({ limit: 6 });
-        setBlogs(response.data.blogs);
+        // Handle the backend API response structure
+        if (response.success && response.data && response.data.blogs) {
+          setBlogs(response.data.blogs);
+        } else {
+          throw new Error('Invalid response format from API');
+        }
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
         setError(errorMessage);
@@ -40,7 +48,8 @@ export default function BlogGrid() {
     fetchBlogs();
   }, []);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return 'Not published';
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -78,16 +87,6 @@ export default function BlogGrid() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Latest Articles
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, tutorials, and best practices in web development, 
-            design, and modern technologies.
-          </p>
-        </div>
 
         {/* Featured Post */}
         {featuredBlog && (

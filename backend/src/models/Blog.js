@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: 'NoteArc Team'
     },
     tags: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.JSON,
       allowNull: true,
       defaultValue: []
     },

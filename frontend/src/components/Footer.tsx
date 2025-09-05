@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 text-gray-900 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="mb-4">
               <NoteArcLogo size="md" />
             </div>
@@ -32,6 +32,27 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-600 mb-4">
+              Get the latest articles and tutorials delivered to your inbox.
+            </p>
+            <form className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
 
           {/* Quick Links
@@ -97,29 +118,6 @@ export default function Footer() {
               </li>
             </ul>
           </div> */}
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-            <p className="text-gray-600 mb-4">
-              Get the latest articles and tutorials delivered to your inbox.
-            </p>
-            <form className="grid space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Bottom Bar */}

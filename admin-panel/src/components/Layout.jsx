@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../utils/AuthContext'
+import Footer from './Footer'
 
 const Layout = () => {
   const { user, logout } = useAuth()
@@ -17,7 +18,7 @@ const Layout = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,9 +39,9 @@ const Layout = () => {
         </div>
       </header>
 
-      <div className="flex">
+      <div className="flex flex-1">
         {/* Sidebar */}
-        <aside className="w-64 bg-white shadow-sm border-r border-gray-200 min-h-screen">
+        <aside className="w-64 bg-white shadow-sm border-r border-gray-200">
           <nav className="mt-8">
             <div className="px-4 space-y-2">
               <Link
@@ -71,8 +72,12 @@ const Layout = () => {
           <Outlet />
         </main>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
 
 export default Layout
+

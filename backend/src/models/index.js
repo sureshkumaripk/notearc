@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config({ path: '../config.env' });
+require('dotenv').config({ path: './config.env' });
 
 // Create Sequelize instance
 const sequelize = new Sequelize(
@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    dialect: process.env.DB_DIALECT,
+    dialect: 'mysql', // Explicitly specify the dialect
     logging: process.env.NODE_ENV === 'development' ? console.log : false,
     pool: {
       max: 5,
