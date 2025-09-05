@@ -4,15 +4,13 @@ import NoteArcLogo from './NoteArcLogo';
 
 
 
-
 export default function Footer() {
   return (
-    
     <footer className="bg-gray-50 text-gray-900 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-              {/* Company Info */}
-            <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
             <div className="mb-4">
               <NoteArcLogo size="md" />
             </div>
@@ -34,7 +32,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
-          
+          </div>
 
           {/* Quick Links
           <div>
@@ -99,19 +97,16 @@ export default function Footer() {
               </li>
             </ul>
           </div> */}
-       
+        </div>
 
         {/* Newsletter Signup */}
-        {/* <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="max-w-md"> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="lg:col-span-2">
-                  <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-                  <p className="text-gray-600 mb-4">
-                    Get the latest articles and tutorials delivered to your inbox.
-                  </p>
-                </div>
-            <form className="flex space-x-2">
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-600 mb-4">
+              Get the latest articles and tutorials delivered to your inbox.
+            </p>
+            <form className="grid space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -123,9 +118,8 @@ export default function Footer() {
               >
                 Subscribe
               </button>
-              </form>
+            </form>
           </div>
-        </div>
         </div>
 
         {/* Bottom Bar */}
@@ -136,11 +130,9 @@ export default function Footer() {
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
               Privacy Policy  
-            
             </Link>
             <Link href="/terms" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
-              TermsAndCondition
-             
+              Terms And Condition
             </Link>
             {/* <Link href="/cookies" className="text-gray-500 hover:text-orange-600 text-sm transition-colors">
               Cookie Policy
@@ -151,6 +143,7 @@ export default function Footer() {
              
           </div>
         </div>
+      </div>
       
     </footer>
   );

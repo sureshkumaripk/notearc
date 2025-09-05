@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Hero /> 
+      <Hero />
       <BlogGrid />
       <Footer />
     </main>

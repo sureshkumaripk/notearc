@@ -27,7 +27,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          {/* <nav className="hidden md:flex space-x-8"> */}
+          <nav className="hidden md:flex space-x-8">
             {/* <Link href="/" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
               Home
             </Link> */}
@@ -40,7 +40,7 @@ export default function Header() {
             <Link href="/about" className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">
               About
             </Link> */}
-           {/* </nav>  */}
+           </nav> 
 
           {/* Search Bar */}
           <div className="hidden md:flex items-center space-x-4">
@@ -77,13 +77,13 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {/* <Link
+              <Link
                 href="/"
                 className="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link> */}
+              </Link>
               {/* <Link
                 href="/blog"
                 className="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium"
