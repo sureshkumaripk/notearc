@@ -39,7 +39,7 @@ export default function RelatedPosts({ currentPost, allPosts }: RelatedPostsProp
           Related Articles
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {relatedPosts.map(post => (
             <article key={post.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-48 flex items-center justify-center">

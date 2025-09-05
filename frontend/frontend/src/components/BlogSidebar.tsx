@@ -74,11 +74,10 @@ export default function BlogSidebar() {
       </div>
 
       {/* Newsletter Signup */}
-      <div className="grid grid-cols-2 gap-8 items-start">
       <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-200">
         <div className="text-center">
           <Mail className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-          {/* <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Stay Updated
           </h3>
           <p className="text-sm text-gray-600 mb-4">
@@ -95,26 +94,9 @@ export default function BlogSidebar() {
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm"
             >
               Subscribe
-            </button> */}
-          {/* </form> */}
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-    <h3 className="text-lg font-semibold">Stay Updated</h3>
-    <p className="text-gray-600 mt-1">
-      Get the latest articles and tutorials delivered to your inbox.
-    </p>
-    <div className="flex mt-4">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="flex-1 px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-      />
-      <button className="bg-orange-600 text-white px-4 py-2 rounded-r-md hover:bg-orange-700">
-        Subscribe
-      </button>
-    </div>
-      </div>
+            </button>
+          </form>
         </div>
-      </div>
       </div>
 
       {/* Quick Links */}
