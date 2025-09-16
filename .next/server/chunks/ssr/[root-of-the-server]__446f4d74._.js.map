@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Admin/Desktop/Blog%20project/notearc/frontend/src/app/terms/page.tsx"],"sourcesContent":["export default function TermsPage() {\r\n  return (\r\n    <main className=\"min-h-screen\">        \r\n            <div className=\"bg-gray-50 py-12\">\r\n                    Terms And Condition\r\n    </div>\r\n    </main>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;kBACR,cAAA,8OAAC;YAAI,WAAU;sBAAmB;;;;;;;;;;;AAK9C","debugId":null}}]
+}
